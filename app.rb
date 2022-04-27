@@ -1,11 +1,11 @@
-load_path = Dir["./vendor/bundle/ruby/2.7.0/gems/**/lib"]
+load_path = Dir["./vendor/bundle/ruby/3.1.0/gems/**/lib"]
 $LOAD_PATH.unshift(*load_path)
 require 'pry'
 require 'erb'
 require 'json'
 require 'capybara'
 require 'capybara/dsl'
-require './config/capybara'
+require './config/capybara' 
 require './operation/crawl/helper_crawl'
 require './operation/crawl/site_generatedata_crawl'
 require './operation/generate/table_html'
