@@ -1,4 +1,4 @@
-load_path = Dir["./vendor/bundle/ruby/2.7.0/gems/**/lib"]
+load_path = Dir["./vendor/bundle/ruby/3.1.0/gems/**/lib"]
 $LOAD_PATH.unshift(*load_path)
 require 'pry'
 require 'erb'
