@@ -6,5 +6,3 @@ source "https://rubygems.org"
 gem "erb"
 gem "capybara"
 gem "webdrivers"
-gem "celerity"
-
