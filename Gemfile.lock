@@ -16,6 +16,7 @@ GEM
     childprocess (4.1.0)
     erb (2.2.3)
       cgi
+    json (2.6.1)
     matrix (0.4.2)
     mini_mime (1.1.2)
     nokogiri (1.13.4-x86_64-linux)
@@ -44,11 +45,8 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
-<<<<<<< HEAD
-  celerity
-=======
->>>>>>> 87bed5bcf13fcc8807bf7be9546e5a1d41f184f2
   erb
+  json (~> 2.6, >= 2.6.1)
   webdrivers
 
 BUNDLED WITH
