@@ -1,7 +1,6 @@
 module Operation
   module Generate
     class TableHtml
-      attr_writer :json_hash, :html_file
 
       def initialize(json_hash, html_file)
         @json_hash = json_hash
@@ -16,7 +15,6 @@ module Operation
         File.open(@html_file, 'w') do |f|
           f.write(res)
         end
-
       end
     end
   end
