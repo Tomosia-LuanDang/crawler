@@ -1,6 +1,2 @@
 ---
-<<<<<<< HEAD
-BUNDLE_PATH: "./vendor/bundle"
-=======
 BUNDLE_PATH: "vendor/bundle"
->>>>>>> 87bed5bcf13fcc8807bf7be9546e5a1d41f184f2

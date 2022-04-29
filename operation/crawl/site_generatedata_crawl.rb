@@ -4,8 +4,10 @@ module Operation
       include Capybara::DSL
       Capybara.current_driver = :selenium
       def start
-        # clear_folder_tmp
-        # download_site_generatedata
+        clear_folder
+        download_site_generatedata
+        yield
+        clear_folder
       end
 
       def download_site_generatedata
@@ -24,7 +26,7 @@ module Operation
         find(".MuiDialogActions-spacing .MuiButtonBase-root", text: "DOWNLOAD").click(delay: 0.3)
       end
 
-      def clear_folder_tmp
+      def clear_folder
         dir_path = '/home/tomosia/Downloads'
         FileUtils.rm_rf Dir.glob("#{dir_path}/*") unless Dir.empty?(dir_path)
       end
