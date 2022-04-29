@@ -1,9 +1,0 @@
-log/**
-doc
-classes
-.yardoc
-pkg
-*.sw?
-.DS_Store
-coverage
-rdoc
