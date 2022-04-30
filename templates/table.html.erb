@@ -11,7 +11,7 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <% @json_hash[0].keys.each do |key| %>
+            <% @json_hash.first.keys.each do |key| %>
               <th scope="col"><%= key.capitalize %></th>
             <% end %>
           </tr>

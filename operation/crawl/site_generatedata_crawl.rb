@@ -9,7 +9,20 @@ module Operation
         yield
         clear_folder
       end
+      
+      def file_downloaded
+        dir_path = './tmp/chromedriver'
+        path = Dir.glob("#{dir_path}/*")
+        file_name = File.basename(path[0].to_s)
+        path_name = File.dirname(path[0].to_s)
+        puts file_name
+        puts path_name
+        data_line = File.read("#{path_name}/#{file_name}")
+        json_hash = JSON.parse(data_line)
+      end
 
+      private
+      
       def download_site_generatedata
         visit('https://generatedata.com/')
         find(".Homepage__dataTypeGrid--1qR div", text: "Name").click(delay: 0.3)
@@ -31,16 +44,6 @@ module Operation
         FileUtils.rm_rf Dir.glob("#{dir_path}/*") unless Dir.empty?(dir_path)
       end
 
-      def file_downloaded
-        dir_path = './tmp/chromedriver'
-        path = Dir.glob("#{dir_path}/*")
-        file_name = File.basename(path[0].to_s)
-        path_name = File.dirname(path[0].to_s)
-        puts file_name
-        puts path_name
-        data_line = File.read("#{path_name}/#{file_name}")
-        json_hash = JSON.parse(data_line)
-      end
     end
   end
 end
