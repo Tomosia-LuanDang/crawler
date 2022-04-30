@@ -6,4 +6,3 @@ source "https://rubygems.org"
 gem "erb"
 gem "capybara"
 gem "webdrivers"
-gem 'json', '~> 2.6', '>= 2.6.1'
