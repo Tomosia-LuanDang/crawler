@@ -5,7 +5,7 @@ module Operation
       Capybara.current_driver = :selenium
       def start
         clear_folder
-        download_site_generatedata
+        # download_site_generatedata
         yield
         clear_folder
       end
