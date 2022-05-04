@@ -49,7 +49,7 @@ module Operation
       end
 
       def clear_folder
-        dir_path = '/home/luandang/Documents'
+        dir_path = '/home/tomosia/Downloads'
         FileUtils.rm_rf Dir.glob("#{dir_path}/*") unless Dir.empty?(dir_path)
       end
 

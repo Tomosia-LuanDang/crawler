@@ -1,9 +1,8 @@
 load_path = Dir["./vendor/bundle/ruby/3.1.0/gems/**/lib"]
-load_path1 = Dir["./vendor/bundle/ruby/2.7.0/gems/**/lib"]
 $LOAD_PATH.unshift(*load_path)
-$LOAD_PATH.unshift(*load_path1)
 
-require 'pry'                     
+require 'axlsx'
+require 'pry'                   
 require 'erb'
 require 'json'
 require 'capybara'
@@ -31,6 +30,10 @@ crawl.start do
   generate_csv = Operation::Generate::ExportCSV.new(crawl.file_downloaded, csv_saved_at)
   generate_csv.generate
 
+  xlsx_saved_at = './publics/user_management.xlsx'
+  generate_xlsx = Operation::Generate::ExportExcel.new(crawl.file_downloaded, xlsx_saved_at)
+  generate_xlsx.generate
+
   
 end
 
@@ -38,8 +41,12 @@ get '/' do
   send_file './publics/user_management.html'
 end
 
-get '/publics/user_management.csv' do
+get '/download-csv' do
   send_file './publics/user_management.csv'
+end
+
+get '/download-xlsx' do
+  send_file './publics/user_management.xlsx'
 end
 
 
