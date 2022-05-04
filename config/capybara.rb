@@ -1,5 +1,5 @@
 class SetupCapybara
-  DOWNLOAD_PATH = './tmp/chromedriver'
+  DOWNLOAD_PATH = './tmp/chromedriver'.freeze
 
   def self.call
     Capybara.register_driver :chrome do |app|

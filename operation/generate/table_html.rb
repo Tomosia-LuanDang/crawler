@@ -1,7 +1,6 @@
 module Operation
   module Generate
     class TableHtml
-
       def initialize(json_hash, html_file)
         @json_hash = json_hash
         @html_file = html_file

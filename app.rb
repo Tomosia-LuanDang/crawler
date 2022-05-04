@@ -1,8 +1,8 @@
-load_path = Dir["./vendor/bundle/ruby/3.1.0/gems/**/lib"]
+load_path = Dir['./vendor/bundle/ruby/3.1.0/gems/**/lib']
 $LOAD_PATH.unshift(*load_path)
 
 require 'axlsx'
-require 'pry'                   
+require 'pry'
 require 'erb'
 require 'json'
 require 'capybara'
@@ -42,7 +42,3 @@ end
 get '/download-xlsx' do
   send_file './publics/user_management.xlsx'
 end
-
-
-
-

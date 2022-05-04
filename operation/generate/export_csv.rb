@@ -12,10 +12,9 @@ module Operation
 				CSV.open(@csv_file, "w" , headers: get_header_column(@json_hash), write_headers: true) do |csv|
           @json_hash.each do |hash|
             csv << hash.values
-					end
+          end
 				end
       end
-      
     end
   end
 end
