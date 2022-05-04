@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 # gem "rails"
-#gem 'axlsx'
+gem "axlsx"
 gem "erb"
 gem "capybara"
 gem "csv"

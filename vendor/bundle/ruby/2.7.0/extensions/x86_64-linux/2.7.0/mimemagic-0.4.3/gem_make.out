@@ -1,3 +1,0 @@
-current directory: /home/luandang/HocTap/tomosia/crawler/vendor/bundle/ruby/2.7.0/gems/mimemagic-0.4.3/ext/mimemagic
-/home/luandang/.rbenv/versions/2.7.0/bin/ruby -I/home/luandang/.rbenv/versions/2.7.0/lib/ruby/2.7.0/rubygems -rrubygems /home/luandang/HocTap/tomosia/crawler/vendor/bundle/ruby/2.7.0/gems/rake-13.0.6/exe/rake RUBYARCHDIR\=/home/luandang/HocTap/tomosia/crawler/vendor/bundle/ruby/2.7.0/extensions/x86_64-linux/2.7.0/mimemagic-0.4.3 RUBYLIBDIR\=/home/luandang/HocTap/tomosia/crawler/vendor/bundle/ruby/2.7.0/extensions/x86_64-linux/2.7.0/mimemagic-0.4.3
-mkdir -p /home/luandang/HocTap/tomosia/crawler/vendor/bundle/ruby/2.7.0/extensions/x86_64-linux/2.7.0/mimemagic-0.4.3/mimemagic

@@ -5,11 +5,11 @@ module Operation
       Capybara.current_driver = :selenium
       def start
         clear_folder
-        # download_site_generatedata
+        download_site_generatedata
         yield
         clear_folder
       end
-      
+
       def file_downloaded
         dir_path = './tmp/chromedriver'
         path = Dir.glob("#{dir_path}/*")
@@ -20,7 +20,7 @@ module Operation
       end
 
       private
-      
+
       def download_site_generatedata
         visit_page
         choose_the_types_of_data
@@ -34,8 +34,8 @@ module Operation
       def visit_page
         visit('https://generatedata.com/')
       end
-      
-      def choose_the_types_of_data 
+
+      def choose_the_types_of_data
         find(".Homepage__dataTypeGrid--1qR div", text: "Name").click(delay: 0.3)
         find(".Homepage__dataTypeGrid--1qR div", text: "Phone").click(delay: 0.3)
         find(".Homepage__dataTypeGrid--1qR div", text: "Email").click(delay: 0.3)
