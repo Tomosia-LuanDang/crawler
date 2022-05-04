@@ -16,15 +16,11 @@ require './operation/generate/table_html'
 require './operation/generate/export_csv'
 require './operation/generate/export_excel'
 
-
-
-
 crawl = Operation::Crawl::SiteGeneratedataCrawl.new
 crawl.start do
   html_saved_at = './publics/user_management.html'
   generate_html = Operation::Generate::TableHtml.new(crawl.file_downloaded, html_saved_at)
   generate_html.generate
-
 
   csv_saved_at = './publics/user_management.csv'
   generate_csv = Operation::Generate::ExportCSV.new(crawl.file_downloaded, csv_saved_at)
@@ -33,8 +29,6 @@ crawl.start do
   xlsx_saved_at = './publics/user_management.xlsx'
   generate_xlsx = Operation::Generate::ExportExcel.new(crawl.file_downloaded, xlsx_saved_at)
   generate_xlsx.generate
-
-  
 end
 
 get '/' do
